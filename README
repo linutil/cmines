@@ -7,3 +7,11 @@ without any licensing restrictions.
 
 It can be built using the provided makefile, and
 the `all` target.
+
+Please see `LICENSE` for a clear description for the
+project license.
+
+Contributions are more than welcome. As of right now
+there's no contributor guidelines, so just try to
+follow the overall style of the project, and we should
+be fine.
