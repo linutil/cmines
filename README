@@ -1,0 +1,9 @@
+cmines - A public domain mine-seeking game.
+===
+
+This project was made with the aim to provide
+a high-quality and fun to play minesweeper game,
+without any licensing restrictions.
+
+It can be built using the provided makefile, and
+the `all` target.
