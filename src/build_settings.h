@@ -1,0 +1,11 @@
+#define RL_LOG 0
+#define PLATFORM_AUDIO 1
+
+#define TILE_SIZE (32)
+
+#define BOARD_SIZE (16)
+
+#define FIELD_MINES (64)
+
+#define WINDOW_WIDTH (BOARD_SIZE * TILE_SIZE)
+#define WINDOW_HEIGHT (BOARD_SIZE * TILE_SIZE)
