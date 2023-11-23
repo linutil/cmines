@@ -5,4 +5,4 @@ Type=Application
 Terminal=false
 Exec=/usr/bin/cmines
 Name=cmines
-Icon=/opt/cmines/cmines/assets/icon.png
+Icon=/opt/cmines/assets/icon.png
