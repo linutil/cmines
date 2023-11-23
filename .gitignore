@@ -1,2 +1,4 @@
 cmines
 *.o
+.idea
+.vscode
