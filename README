@@ -8,6 +8,9 @@ without any licensing restrictions.
 It can be built using the provided makefile, and
 the `all` target.
 
+To install, run `sudo make install`, and to
+uninstall, `sudo make uninstall`
+
 Please see `LICENSE` for a clear description for the
 project license.
 

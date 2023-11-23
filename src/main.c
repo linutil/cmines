@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#include <unistd.h>
 #include "platform.h"
 #include "mine_state.h"
 #include "build_settings.h"

@@ -13,10 +13,12 @@ LDFLAGS:=-g
 MKDIR:=mkdir
 CP:=cp
 LN:=ln
+CHMOD:=chmod
+ECHO:=echo
 
 BINARY_NAME:=cmines
 
-INSTALL_DIRECTORY:=/usr/opt/cmines/
+INSTALL_DIRECTORY:=/opt/cmines
 BINARY_LD:=/usr/bin/$(BINARY_NAME)
 
 %.o: %.c $(HDR)
@@ -37,7 +39,16 @@ cleandist: clean
 	$(RM) -f cmines
 
 install: all
-	$(MKDIR) -p $(INSTALL_DIRECTORY)
+	$(RM) -rf $(INSTALL_DIRECTORY)
+	$(MKDIR) $(INSTALL_DIRECTORY)
 	$(CP) -r $(BINARY_NAME) assets $(INSTALL_DIRECTORY)
-	$(LN) -s $(BINARY_LD) $(INSTALL_DIRECTORY)/$(BINARY_NAME)
+	$(ECHO) "pushd $(INSTALL_DIRECTORY) && ./$(BINARY_NAME) && popd" >> $(INSTALL_DIRECTORY)/run.sh
+	$(CHMOD) +x $(INSTALL_DIRECTORY)/run.sh
 
+	$(RM) $(BINARY_LD)
+	$(LN) -s $(INSTALL_DIRECTORY)/run.sh $(BINARY_LD)
+
+	$(CP) cmines.desktop /usr/share/applications/cmines.desktop
+
+uninstall:
+	$(RM) -rf $(INSTALL_DIRECTORY) $(BINARY_LD) /usr/share/applications/cmines.desktop
